@@ -1,5 +1,5 @@
 # Raj Das
-## A Dork with an avid interest in Computer Science.
+## Portfolio Website.
 Please Visit: https://rajdas2001.github.io/rajdas/
 or bit.ly/rajdas293
 
