@@ -131,6 +131,95 @@ p {
     font-size: 16px;
   }
 }
+.three{
+   z-index: -1;
+   top: 800px;
+   left:0;
+   background: url(https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=a9ed512366462aff761f7c04ac383675) center center no-repeat;
+   @include cover();
+    #button{
+       width: 122px;
+       padding: 16px;
+       height: 50px;
+       color: $pale-white;
+       @include big();
+       font-size: 2.5em;
+       position:absolute;
+       @include center();
+       background: transparent;
+       @include anime(0.6s, (cubic-bezier(.55,0,.1,1)));
+       cursor: pointer;
+       box-shadow: 0px 0px 0px #fff;
+     
+       
+       z-index: 0;
+       .ring{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          @include round(50px);
+          top: 40%;
+          left: 45%;
+          @include anime(1s,(cubic-bezier(.55,0,.1,1)));
+          transform:perspective(500px)  translate3d(0px, 0px,0px);
+          opacity: 0.0;
+       }
+       
+       &:hover .one{
+          transform:perspective(500px)  translate3d(-90px, -50px,150px);
+          opacity: 1;
+       }
+        &:hover .two{
+          transform:perspective(800px)  translate3d(-130px, 50px,180px);
+          opacity: 0.6;
+       }
+        &:hover .three{
+          transform:perspective(800px)  translate3d(130px, 50px,30px);
+          opacity: 0.2;
+       }
+       &:hover .four{
+          transform:perspective(800px)  translate3d(130px, -120px,80px);
+          opacity: 0.9;
+       }
+       &::after{
+         position: absolute;
+          top: -35px;
+          left:0;
+         width: 150px;
+         height: 150px;
+          content: "";
+          background: #fff;
+          z-index: -1;
+          transform:perspective(800px) scale(0.0) rotate(0deg);
+          @include anime(2s,(cubic-bezier(.55,0,.1,1)));
+       }
+       &:before{
+           position: absolute;
+          top: -40px;
+          left:-6px;
+         width: 160px;
+         height: 160px;
+          border: solid 1px #fff;
+          content: "";
+          background:transparent;
+          z-index: -1;
+          transform:perspective(800px) scale(0.4) rotate(0deg);
+          @include anime(2s, (cubic-bezier(.55,0,.1,1)));
+       }
+       &:hover::after{
+         transform:perspective(800px) scale(1.0) rotate(600deg);
+         
+       }
+       &:hover::before{
+           transform:perspective(800px) scale(1.0) rotate(-100deg);
+       }
+       &:hover{
+          color: #505050;
+       }
+      
+   }
+   }
 
 @media only screen and (max-width: 100px) {
   h1 {
