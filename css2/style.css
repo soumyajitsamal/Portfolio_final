@@ -131,6 +131,15 @@ p {
     font-size: 16px;
   }
 }
+
+@media only screen and (max-width: 100px) {
+  h1 {
+    font-size: 15px;
+  }
+  h1::after {
+    height: 4px;
+  }
+}
 .three{
    z-index: -1;
    top: 800px;
@@ -220,12 +229,3 @@ p {
       
    }
    }
-
-@media only screen and (max-width: 100px) {
-  h1 {
-    font-size: 15px;
-  }
-  h1::after {
-    height: 4px;
-  }
-}
