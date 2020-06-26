@@ -71,29 +71,68 @@ SSSssshhhhh!! The code starts below -->
 In a nutshell, I am a dork; Funny and stupid.">
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css2/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js2/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js2/demo.js"></script>
-</head>
-    
+ </head>
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-    
+.bgimg {
+  background-image: url('https://wallpaperplay.com/walls/full/7/2/9/20920.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
 
-<div id="particles">
-  <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Soumyajit Samal</h2>
-        <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-      <p>
-      <a target="_self" href ="main.html"><img src="ar1.png" height="100px" width="150px"></a>
-      </p>
-    
+<div class="bgimg">
+  <div class="topleft">
+  <!--  <p>Logo</p> -->
+  </div>
+  <div class="middle">
+    <h1><p style="color:#6a097d">Welcome to my World.</p></h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+	  
+    <p>
+    <font size="3"> Designed with ❤️ by Soumyajit</font>
+    </p></p>
   </div>
 </div>
 
-</body>
+
+    
 </html>
