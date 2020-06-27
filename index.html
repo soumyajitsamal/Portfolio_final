@@ -113,43 +113,87 @@ hr {
   margin: auto;
   width: 40%;
 }
-	    .button {
-  border-radius: 4px;
-  background-color: #07031a;
+	    .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
-  color: #f4f6ff;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
+  outline: none;
   position: relative;
-  transition: 0.5s;
-}
+  padding: 10px;
+  }
 
-.button span:after {
-  content: '\00bb';
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+  transition: all .3s ease-in-out 0s;
 }
 
-.button:hover span {
-  padding-right: 25px;
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
 }
 
-.button:hover span:after {
+button:hover::before, button:focus::before {
   opacity: 1;
-  right: 0;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
 </style>
 <body>
@@ -161,6 +205,9 @@ hr {
   <div class="middle">
     <h1><p style="color:#f7fbe1">Hi! Welcome to my World.</p></h1>
 	  <a href="main.html"><button class="button"><span>Dive Now</span></button></a>
+	  <div class="wrap">
+  <button class="button">Submit</button>
+</div>
 	  
   </div>
   <div class="bottomleft">
